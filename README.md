@@ -1,12 +1,12 @@
 # Back button image can't use a custom SF Symbol
 
-On iOS, `ScreenStackHeaderBackButtonImage` with `source={{ uri: 'custom.chevron.left' }}` shows UIKit's chevron when `custom.chevron.left` is a custom symbol in the app's asset catalog. `loadBackButtonImageInViewController:` in `RNSScreenStackHeaderConfig.mm` only copies the bitmap that the React Native `<Image>` loaded. No React Native image loader resolves a symbol set name, so the bitmap is nil and UIKit keeps its own chevron.
+On iOS, `ScreenStackHeaderBackButtonImage` with `source={{ uri: 'custom.chevron.left' }}` shows UIKit's chevron when `custom.chevron.left` is a custom symbol in the app's asset catalog. `loadBackButtonImageInViewController:` in `RNSScreenStackHeaderConfig.mm` takes the back button image from the bitmap that the React Native `<Image>` loaded. No React Native image loader resolves a symbol set name, so there is no bitmap. The method returns an empty `UIImage`, which goes to `setBackIndicatorImage:transitionMaskImage:`, and the bar draws UIKit's chevron.
 
 The whole repro is [`App.tsx`](App.tsx) plus one symbol set, [`ios/RNSRepro/Images.xcassets/custom.chevron.left.symbolset`](ios/RNSRepro/Images.xcassets/custom.chevron.left.symbolset). The symbol is a square-ended chevron, so it is easy to tell apart from UIKit's round-capped one.
 
 ## Run it
 
-You need Xcode and an iOS simulator.
+You need a Node version that React Native 0.86 supports, Xcode with an iOS simulator, and CocoaPods.
 
 ```sh
 npm install
@@ -46,7 +46,7 @@ npx expo run:ios
 - react-native-screens 4.30.0
 - React Native 0.86.3, New Architecture, Hermes
 - Expo SDK 57 (`expo` 57.0.22), debug build
-- Xcode 26.6
+- Node 22.23.3, Xcode 26.6
 - iPhone 17 simulator, iOS 26.1
 
 The symbol SVG was drawn for this repo and is public domain (CC0).
