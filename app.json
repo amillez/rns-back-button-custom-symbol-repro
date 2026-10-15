@@ -1,0 +1,14 @@
+{
+  "expo": {
+    "name": "RNSRepro",
+    "slug": "rns-back-button-custom-symbol-repro",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "automatic",
+    "platforms": ["ios"],
+    "ios": {
+      "bundleIdentifier": "com.example.rnsrepro"
+    }
+  }
+}

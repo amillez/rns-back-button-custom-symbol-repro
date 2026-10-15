@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Square-ended chevron for this repro. Public domain (CC0). -->
+<svg width="800" height="600" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <g id="Notes">
+    <text id="template-version" x="785" y="575" text-anchor="end">Template v.3.0</text>
+  </g>
+  <g id="Guides" stroke="rgb(39,170,225)" stroke-width="0.5px">
+    <path id="Capline-S" d="M18,76 l800,0" />
+    <path id="Baseline-S" d="M18,146 l800,0" />
+    <path id="left-margin-Ultralight-S" d="M239.882,56 l0,110" />
+    <path id="right-margin-Ultralight-S" d="M288.740,56 l0,110" />
+    <path id="left-margin-Regular-S" d="M439.882,56 l0,110" />
+    <path id="right-margin-Regular-S" d="M488.740,56 l0,110" />
+    <path id="left-margin-Black-S" d="M639.882,56 l0,110" />
+    <path id="right-margin-Black-S" d="M688.740,56 l0,110" />
+    <path id="Capline-M" d="M18,276 l800,0" />
+    <path id="Baseline-M" d="M18,346 l800,0" />
+    <path id="Capline-L" d="M18,476 l800,0" />
+    <path id="Baseline-L" d="M18,546 l800,0" />
+  </g>
+  <g id="Symbols">
+    <g id="Ultralight-S" transform="matrix(4.762,0,0,4.762,206.548,53.857)">
+      <path d="M15,4 L17.26,6.26 L11.52,12 L17.26,17.74 L15,20 L7,12 Z" />
+    </g>
+    <g id="Regular-S" transform="matrix(4.762,0,0,4.762,406.548,53.857)">
+      <path d="M15,4 L17.26,6.26 L11.52,12 L17.26,17.74 L15,20 L7,12 Z" />
+    </g>
+    <g id="Black-S" transform="matrix(4.762,0,0,4.762,606.548,53.857)">
+      <path d="M15,4 L17.26,6.26 L11.52,12 L17.26,17.74 L15,20 L7,12 Z" />
+    </g>
+  </g>
+</svg>
